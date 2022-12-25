@@ -13,6 +13,9 @@ services:
     build:
       context: serviceone
       dockerfile: Dockerfile
+
+    environment:
+     - SERVICE_TWO=http://servicetwo:80/
     ports:
       - "8080:80"
     networks:
