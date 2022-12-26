@@ -22,10 +22,10 @@ public class HomeController : ControllerBase
     }
 
 
-    [HttpGet("network")]
+    [HttpGet("servicetwo")]
     public IActionResult NetworkRequest()
     {
-        var response = _client.GetAsync("WeatherForecast").Result;
+        var response = _client.GetAsync("list").Result;
         return Ok(response.Content.ReadAsStringAsync().Result);
     }
 }
